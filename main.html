@@ -1,0 +1,571 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>On the spot</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<script>
+
+		/*magazine*/
+
+		$(function(){
+			$.ajax({
+				url:"./json/mag.json",
+
+				dataType:"json",
+
+				success:function(data){
+
+					if(data.length>0){
+
+						for (var i in data){
+
+							$("#magazine .box1").eq(i).append('<a href="sub.html" target="_self">'+'<img src="img/'+data[i].url+'">'+'</a>');
+
+							$("#magazine > .wrap").eq(i).append('<h4><a href="sub.html" target="_self">'+data[i].title+'</a><h4>');
+
+						}
+
+					}
+
+
+				}
+			});
+		});
+
+		
+
+		/*new arrival*/	
+		$(function(){
+			$.ajax({
+				url:"./json/new.json",
+
+				dataType:"json",
+
+				success:function(data){
+
+					if(data.length>0){
+
+						for (var i in data){
+
+							$("#new .box2").eq(i).append('<a href="sub.html" target="_self">'+'<img src="img/'+data[i].url+'">'+'</a>');
+
+							$("#new .box2").eq(i).append('<h5><a href="sub.html" target="_self">'+data[i].brandname+'</a><h5>');
+
+							$("#new .box2").eq(i).append('<pre-wrap><a href="#sub.html" target="_self">'+data[i].product+'</a></pre-wrap>');
+
+							$("#new .box2").eq(i).append('<p>'+data[i].price+'</p>');
+						}
+
+					}
+
+
+				}
+			});
+		});
+
+
+
+
+		/*promotion*/
+
+		$(function(){
+			$.ajax({
+				url:"./json/pro.json",
+
+				dataType:"json",
+
+				success:function(data){
+
+					if(data.length>0){
+
+						for (var i in data){
+
+							$("#promotion .box3").eq(i).append('<a href="sub.html" target="_self">'+'<img src="img/'+data[i].url+'">'+'</a>');
+
+							$("#promotion > .wrap").eq(i).append('<h4><a href="sub.html" target="_self">'+data[i].brandname+'</a><h4>');
+
+							$("#promotion > .wrap").eq(i).append('<pre-wrap><a href="#sub.html" target="_self">'+data[i].product+'</a></pre-wrap>');
+
+							$("#promotion > .wrap").eq(i).append('<p>'+data[i].price+'</p>');
+						}
+
+					}
+
+
+				}
+			});
+		});
+
+		/*editor*/
+
+		$(function(){
+			$.ajax({
+				url:"./json/editor.json",
+
+				dataType:"json",
+
+				success:function(data){
+
+					if(data.length>0){
+
+						for (var i in data){
+
+							$(".box4-1").eq(i).append('<a href="sub.html" target="_self">'+'<img src="img/'+data[i].title_img+'">'+'</a>');
+
+							$(".box4 > .imgbox1").eq(i).append('<a href="sub.html" target="_self">'+'<img src="img/'+data[i].box1_img+'">'+'</a>');
+
+							$(".box4 > .imgbox1").eq(i).append('<h5><a href="sub.html" target="_self">'+data[i].brandname+'</a></h5>');
+
+							$(".box4 > .imgbox1").eq(i).append('<pre-wrap><a href="sub.html" target="_self">'+data[i].product1+'</a></pre-wrap>');
+
+							$(".box4 > .imgbox1").eq(i).append('<p>'+data[i].price1+'</p>');
+
+							$(".box4 > .imgbox2").eq(i).append('<a href="sub.html" target="_self">'+'<img src="img/'+data[i].box2_img+'">'+'</a>');
+
+							$(".box4 > .imgbox2").eq(i).append('<h5><a href="sub.html" target="_self">'+data[i].brandname+'</a></h5>');
+
+							$(".box4 > .imgbox2").eq(i).append('<pre-wrap><a href="sub.html" target="_self">'+data[i].product2+'</a></pre-wrap>');
+
+							$(".box4 > .imgbox2").eq(i).append('<p>'+data[i].price2+'</p>');
+
+						}
+
+					}
+
+
+				}
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<header>
+		<div id="logo"><a href="main.html" target="_self"><img src="img/logo.png" alt="로고 이미지"></a></div>
+		<div id="login">
+			<ul>
+				<li><a href="#">login</a></li>
+				<li><a href="#">my page</a></li>
+				<li><a href="#">help</a></li>
+				<li><a href="#">store</a></li>
+			</ul>
+		</div>
+		<div id="icon">
+			<img src="img/search.png" alt="검색" id="search">
+			<img src="img/cart.png" alt="장바구니" name="cart">
+		</div>
+		<div id="navwrap">
+			<nav>
+				<ul id="menu_list">
+					<li><a href="sub.html" target="_self" style="color: darkred;">uncoming</a></li>
+					<li><a href="sub.html" target="_self">new arrivals</a></li>
+					<li><a href="sub.html" target="_self">brand</a>
+						<div class="subwrap">
+							<nav id="sub">
+								<ul>
+									<li style="width:200px; border: 1px solid #333;">TOP BRAND
+										<div id="submenu">
+											<p>nike</p>
+											<p>adidas</p>
+											<p>newbalance</p>
+											<p>vans</p>
+											<p>convarse</p><br>
+											<p style="text-transform: none; font-size: 13px;">view all brand</p>
+										</div>
+									</li>
+									<li style="width:800px;">ISSUE
+										<div id="imgmenu">
+											<img src="img/drop1.jpeg">
+											<img src="img/drop2.jpeg">
+											<img src="img/drop3.jpeg">
+										</div>
+										<p id="count"></p>
+									</li>
+
+								</ul>
+							</nav>
+						</div>
+					</li>
+					<li><a href="sub.html" target="_self">shoes</a>
+						<div class="subwrap">
+							<nav id="sub">
+								<ul>
+									<li style="width:150px; border: 1px solid #333;">SNEAKERS
+										<div class="submenu2">
+											<p>캔버스화</p>
+											<p>슬립온</p>
+											<p>뮬</p>
+										</div>
+									</li>
+									<li style="width:150px; border: 1px solid #333;">CASUAL
+										<div class="submenu2">
+											<p>운동화</p>
+											<p>로퍼</p>
+											<p>레이스업</p>
+											<p>데크슈즈</p>
+											<p>워킹슈즈</p>
+										</div>
+									</li>
+									<li style="width:150px; border: 1px solid #333;">SANDAL
+										<div class="submenu2">
+											<p>슬라이드</p>
+											<p>아쿠아슈즈</p>
+											<p>스포츠샌들</p>
+											<p>코르크샌들</p>
+											<p>플립플랍</p>
+										</div>
+									</li>
+									<li>RESTOCK
+										<div class="imgmenu2">
+											<img src="img/res.jpeg">
+											<img src="img/res2.jpeg">
+											<img src="img/res3.jpeg">
+											<img src="img/res4.jpeg">
+											<p>view more..</p>
+										</div>
+									</li>
+									<li>FEATURED
+										<div class="imgmenu2">
+											<img src="img/fe.jpeg">
+											<img src="img/fe2.jpeg">
+											<img src="img/fe3.jpeg">
+											<img src="img/fe4.jpeg">
+											<p>view more..</p>
+										</div>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</li>
+					<li><a href="sub.html" target="_self">app&acc</a></li>
+					<li id="sale"><a href="sub.html" target="_self">sale</a></li>
+					<li><a href="sub.html" target="_self">editors diary</a></li>
+					<li><a href="sub.html" target="_self">magazin</a></li>
+					<li><a href="sub.html" target="_self">event</a></li>
+					<li><a href="sub.html" target="_self">기획전</a></li>
+				</ul>
+			</nav>
+		</div>			
+	</header>
+
+	<div id="search_box">
+		<div>
+			<input type="search" name="search" placeholder="찾으실 상품을 입력하세요.">
+			<span><img src="img/search.png"></span>
+			<span><img src="img/x.png" id="x"></span>
+		</div>
+	</div>	
+
+
+
+	<div id="slider">
+		<ul class="slide1">
+			<li><a href="sub.html" target="_self"><img src="img/상단 슬라이더1.jpg" alt="상단 슬라이더 이미지"></a></li>
+			<li><a href="sub.html" target="_self"><img src="img/상단 슬라이더2.jpg" alt="상단 슬라이더 이미지"></a></li>
+			<li><a href="sub.html" target="_self"><img src="img/상단 슬라이더3.jpg" alt="상단 슬라이더 이미지"></a></li>
+			<li><a href="sub.html" target="_self"><img src="img/상단 슬라이더4.jpg" alt="상단 슬라이더 이미지"></a></li>
+		</ul>
+		<div id="sidebox">
+			<span class="prev">&lt;</span>
+			<span class="next">&gt;</span>
+		</div>
+	</div>
+
+
+
+	<section id="magazine">
+		<h1 id="txt1"></h1>
+		<div id="arrow"><a href="sub.html" target="_self"><img src="img/arrow.png" alt="화살표 아이콘"></a></div>
+
+		<div class="wrap">
+			<div class="box1"></div>
+		</div>	
+
+		<div class="wrap">
+			<div class="box1"></div>
+		</div>	
+
+		<div class="wrap">
+			<div class="box1"></div>
+		</div>	
+
+		<div class="wrap">
+			<div class="box1"></div>
+		</div>	
+	</section>
+
+	<section id="new">
+		<h1 id="txt2"></h1>
+
+		<div id="arrow2"><a href="sub.html" target="_self"><img src="img/arrow.png" alt="화살표 아이콘"></a></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+
+		<div class="box2"></div>
+	</section>
+
+
+	<div id="banner">
+		<a href="sub.html" target="_self"><img src="img/하단 배너.jpg" alt="크록스 하단 배너"></a>
+	</div>
+
+	<section id="promotion">
+		<h1 id="txt3"></h1>
+
+		<div id="arrow"><a href="sub.html" target="_self"><img src="img/arrow.png" alt="화살표 아이콘"></a></div>
+
+		<div class="wrap">
+			<div class="box3"></div>
+		</div>	
+
+		<div class="wrap">
+			<div class="box3"></div>
+		</div>	
+
+		<div class="wrap">
+			<div class="box3"></div>
+		</div>	
+
+		<div class="wrap">
+			<div class="box3"></div>
+		</div>	
+	</section>
+
+
+	<section id="slidebox">
+
+		<div id="txt_wrap">
+			<h1 id="txt4"></h1>
+			<div id="arrow"><a href="sub.html" target="_self"><img src="img/arrow.png" alt="화살표 아이콘"></a></div>
+		</div>
+		
+		<div id="wrap1">
+			<div id="wrap">
+
+				<div id="slider">
+					<div class="box4-1"></div>
+
+					<div class="box4">
+						<h1>무더운 여름을 화사하게</h1>
+						<p>Worn Blue와 비비드 그린 스우시가 매력적인 에어맥스1과 친환경 소재로 만들어진 NRG MTZ 티셔츠를 함께 매치해 보세요. 무더운 여름 화사한 분위기를 연출해 줄 거에요.</p>
+						<div class="imgbox1"></div>
+						<div class="imgbox2"></div>
+					</div>
+				</div>
+
+
+				<div id="slider">
+					<div class="box4-1"></div>
+
+					<div class="box4">
+						<h1>추억을 신는 신발</h1>
+						<p>에어 트레이너 1 탄생 35주년을 맞아 출시된 Chlorophyll. 아이코닉한 컬러웨이와 오리지널 스트랩. 오랜 시간이 지났어도 어느 룩에도 어울리는 포인트가 되어줍니다.</p>
+						<div class="imgbox1"></div>
+						<div class="imgbox2"></div>
+					</div>
+				</div>
+
+				<div id="slider">
+					<div class="box4-1"></div>
+
+					<div class="box4">
+						<h1>같은 듯 다른, 조금 더 특별한.</h1>
+						<p>중요한 건 항상 디테일입니다. SOLO SWSH 후디를 보며 뭔가 느껴지시나요? 뭔가 다른 로고 느낌, 입으니 뭔가 다른 핏. 입어보세요. 그 미세한 디테일이 느껴지실꺼에요.</p>
+						<div class="imgbox1"></div>
+						<div class="imgbox2"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<span class="prev2">&lt;</span>
+		<span class="next2">&gt;</span>
+	</section>  
+
+
+	<footer>
+		<div id="footerbox">
+			<div id="footerbox2">
+				<div id="footerlogo"><img src="img/footer_logo.png" alt="하단 로고"></div>
+				<p>(주)에이비씨마트 코리아 대표이사 : 이기호 주소 : 서울특별시 중구 을지로 100, B동 21층 (을지로 2가, 파인에비뉴)<br>
+
+					사업자등록번호 : 201-81-76174 통신판매업신고 : 제 2015-서울중구-1036호<br> 개인정보보호책임자 : 박영수 <a href="#">이메일 : onthespot@abcmartkorea.com</a> </p>
+					<ul>
+						<li><a href="#">사업자정보확인</a></li>
+						<li>|</li>
+						<b><li><a href="#">개인정보처리방침</a></li></b>
+						<li>|</li>
+						<li><a href="#">이용약관</a></li>
+						<li>|</li>
+						<li><a href="#">멤버쉽 이용약관</a></li>
+						<li>|</li>
+						<li><a href="#">위치 정보 서비스 이용약관</a></li>
+						<li>|</li>
+						<li><a href="#">구매안전서비스 가입사실확인</a></li>
+					</ul>
+				</div>
+				<div id="footerbox3">
+					<div class="box">
+						<h4>information</h4>
+						<ul>
+							<li><a href="#">faq</a></li>
+							<li></li>
+							<li><a href="#">입점/제휴문의</a></li>
+							<li></li>
+							<li><a href="#">기프트카드안내</a></li>
+						</ul>
+					</div>
+					<div class="box">
+						<h4>social</h4>
+						<a href="#"><img src="https://cdn3.iconfinder.com/data/icons/ink-social-media/35/instagram-256.png" alt="인스타 아이콘"></a>
+						<a href="#"><img src="https://cdn3.iconfinder.com/data/icons/ink-social-media/35/youtube-256.png" alt="유튜브 아이콘"></a>
+					</div>
+				</div>
+				<div id="footerbox4">
+					<p>본 상품의 상품 이미지 저작권은 ㈜에이비씨마트코리아에 있으며 내용의 무단복제를 금합니다.<br>
+					COPYRIGHT ⓒ ABC-MART KOREA CO,LTD. ALL RIGHTS RESERVED.</p>
+				</div>	
+			</div>
+		</footer>
+		<script>
+
+			/*검색 아이콘 토글*/
+
+			$("#search_box").css("display", "none");
+
+			$("#search").click(function(){
+				$("#search_box").slideToggle();
+				$("#x").click(function(){
+					$("#search_box").slideUp();
+				});
+			});
+
+			/*카운트 다운*/
+
+			var countDownDate = new Date("Jan 28, 2023 18:00:00").getTime();
+
+			var x = setInterval(function() {
+
+				var now = new Date().getTime();
+
+				var distance = countDownDate - now;
+
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				document.getElementById("count").innerHTML = "DRAW<br>" + days + "일 " + hours + "시 "
+				+ minutes + "분 " + seconds + "초 남음";
+
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "DRAW 종료";
+				}
+			}, 1000);
+			
+
+			/*상단 슬라이더*/
+
+			function prev(){			
+				$(".slide1 li:last").prependTo(".slide1");
+				$(".slide1").css({marginLeft:-1800});
+				$(".slide1").stop().animate({marginLeft:0},800);
+			}
+
+			function next(){
+				$(".slide1").stop().animate({marginLeft:-1800},800,function(){
+					$(".slide1 li:first").appendTo(".slide1");
+					$(".slide1").css({marginLeft:0});
+				});
+			}
+
+			function slide(){
+				$(".slide1").stop().animate({marginLeft:-1800},800,function(){
+					$(".slide1 li:first").appendTo(".slide1");
+					$(".slide1").css({marginLeft:0});
+				});
+			}
+
+			setInterval(slide,4000);
+
+			$(".prev").click(function(){
+				prev();
+			});
+
+			$(".next").click(function(){
+				next();
+			});
+
+			/*하단 에디터 슬라이더*/
+
+			$("#wrap1>#wrap").css({marginLeft:-1000});
+
+			function prev2(){
+				$("#wrap1>#wrap>div:last").stop().prependTo("#wrap1>#wrap");
+				$("#wrap1>#wrap").stop().animate({marginLeft:-1000});
+				$("#wrap1>#wrap").css({marginLeft:-1000});
+
+			};
+
+			function next2(){
+				$("#wrap1>#wrap").stop().animate({marginLeft:-1000},function(){
+					$("#wrap1>#wrap>div:first").stop().appendTo("#wrap1>#wrap");
+					$("#wrap1>#wrap").css({marginLeft:-1000});
+				});
+			};
+
+			$(".prev2").click(function(){
+				prev2();
+			});
+
+			$(".next2").click(function(){
+				next2();
+			});
+
+
+			/*섹션 제목*/
+			window.onload=function(){
+
+				let txt1=document.getElementById("txt1")
+				txt1.innerHTML = "magazine";
+
+				let txt2=document.getElementById("txt2")
+				txt2.innerHTML = "new arrival";
+
+				let txt3=document.getElementById("txt3")
+				txt3.innerHTML = "promotion";
+
+				let txt4=document.getElementById("txt4")
+				txt4.innerHTML = "editor's diary";
+
+			}
+
+		</script>
+	</body>
+	</html>

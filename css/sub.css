@@ -1,0 +1,99 @@
+﻿@charset "utf-8";
+		body {margin: 0px;}
+		#sub1 {width: 100%; height: 1100px; margin: 0 auto; padding: 50px 0px; border-top: 1px solid #ddd;}
+		#content {width: 1200px; height: 1100px; margin: 20px auto;}
+		#content > #product {width: 750px; height: 1000px; float: left;}
+		#content > #product > #imgbox {width: 700px; height: 750px; margin: -900px auto; position: relative; overflow: hidden;}
+		#content > #product > #imgbox > img {width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+		#content > #product > #imgbox > img:not(:first-child) {display: none;}
+		#content > #product > input[value="측면1";]:checked ~ #imgbox img[alt="측면1"] {display: block;}
+		#content > #product > input[value="측면2"]:checked ~ #imgbox img[alt="측면2"] {display: block;}
+		#content > #product > input[value="측면3"]:checked ~ #imgbox img[alt="측면3"] {display: block;}
+		#content > #product > input[value="윗면"]:checked ~ #imgbox img[alt="윗면"] {display: block;}
+		#content > #product > input[value="밑면"]:checked ~ #imgbox img[alt="밑면"] {display: block;}
+
+		#content > #product > input[type="radio"] {display: none;}
+		#content > #product > input[type="radio"] + label {display: inline-block; text-align: center; cursor: pointer; margin: 800px 0px 0 13px;}
+		#content > #product > input[type="radio"] + label > img {width: 130px; height: 130px;}
+		#content > #product > input[type="radio"]:checked + label {border: 1px solid #666;}
+
+		#content > #context {width: 450px; height: 1100px; float: right;}
+		#content > #context > #context1 {width: 400px; height: 320px; margin: 36px 25px; border-bottom: 1px solid #ddd;}
+		#content > #context > #context1 > span > a {text-decoration: none; font-size: 14px; color: #666; font-weight: bold; display: block; margin: 0 0 20px 0;}
+		#content > #context > #context1 > p {font-size: 20px; color: #333; display: block; margin: 0 0 0 10px;}
+		#content > #context > #context1 > h3 {font-size: 14px; display: block; margin: 10px auto;}
+		#content > #context > #context1 input[type="radio"] {display: none;}
+		#content > #context > #context1 input[type="radio"] + span {display: inline-block; padding: 10px 22px; border: 1px solid #666; margin: 0 0 5px 0px; cursor: pointer; box-sizing: border-box;}
+		#content > #context > #context1 input[type="radio"] + span:hover {transition: all 0.5s ease; border-color: #000; border: 2px solid #000;}
+
+
+		#content > #context > #context2 {width: 400px; height: 180px; margin: 40px 25px; border-top: 2px solid #333; border-bottom: 2px solid #333;}
+		#content > #context > #context2 > #input1 {background-color: #fff; color: #333; border: 2px solid #333; width: 200px; height: 60px; font-weight: bold; float: left; margin: 40px 0 0 0px; text-transform: uppercase;}
+		#content > #context > #context2 > #input1:hover {background-color: #ddd; transition: all 0.5s ease;}
+		#content > #context > #context2 > #input2 {background-color: #333; color: #fff; border: 2px solid #333; width: 200px; height: 60px; font-weight: bold; float: right; margin: 40px 0 0 0px; text-transform: uppercase;}
+		#content > #context > #context2 > h5 {display: block; margin: 25px 0 0 0px; color: #333; font-size: 14px; font-weight: bold;}
+		#content > #context > #context2 > h1 {display: block; margin: -30px 0 0 350px; color: red;}
+		#content > #context > #context2 > h1:after {content: "원"; font-size: 14px; color: #333;}
+
+		#content > #context > #context3 {width: 400px; height: 40px; margin: -20px 25px; border-bottom: 1px solid #333;}
+		#content > #context > #context3 > span {font-family: sans-serif; font-weight: bold; font-size: 16px; margin: 0 310px 0 0;}
+		
+		#content > #context > #context3 > .view {opacity: 0;}
+		#content > #context > #context3 > input[value="wide"]:checked ~ .view {opacity: 1; background-color: #fff; border-bottom: 1px solid #333;}
+		#content > #context > #context3 > .view > ul > li {font-size: 12px; color: #666;}
+
+		#sub2 {width: 1200px; height: 3100px; margin: 0 auto;}
+		#sub2 > #product-detail {width:1200px; height:3100px; margin:100px auto 0;}
+		#sub2 > #product-detail > ul {width: 1200px; height: 50px; margin: 40px auto 0px;}
+		#sub2 > #product-detail > ul > li {width:300px; height:100%; background-color:#333; float:left; text-align:center; padding:15px 0 0 0px; border:2px solid #fff; font-size:13px;}
+		#sub2 > #product-detail > ul > li:nth-child(1) {background-color:#fff; border:2px solid #000; color:#000;}
+		#sub2 > #product-detail > ul > li > a {color:#fff; text-decoration: none;}
+		#sub2 > #product-detail > h2 {display: block; text-align: center; margin: 70px 0 -20px 0px;}
+		#sub2 > #product-detail > p {text-align: center; font-size: 14px;}
+		#sub2 > #product-detail > .imgbox {margin: 80px auto; display: block;}
+
+		#sub3 {width: 1200px; height: 550px; margin: 0 auto;}
+		#sub3 > ul {width: 1200px; height: 50px; margin: 40px auto 0px;}
+		#sub3 > ul > li {width:300px; height:100%; background-color:#333; float:left; text-align:center; padding:15px 0 0 0px; border:2px solid #fff; font-size:13px;}
+		#sub3 > ul > li:nth-child(2) {background-color:#fff; border:2px solid #000; color:#000;}
+		#sub3 > ul > li > a {color:#fff; text-decoration: none;}
+
+		#sub3 > h2 {float: left; padding: 50px 20px 0px; font-size: 20px;}
+		#sub3 > #shipping-textbox {width:100%; height:400px;}
+		#sub3 > #shipping-textbox > ul {display: block; width:1100px; height:280px;  margin:100px 35px 0px;}
+		#sub3 > #shipping-textbox > ul > li {color: #666; font-size: 13px;}
+		#sub3 > #shipping-textbox > ul > .text {color: #333; font-size: 15px; font-weight: bold; list-style:disc;}
+
+		#sub4 {width: 1200px; height: 350px; margin: 0 auto;}
+		#sub4 > ul {width: 1200px; height: 50px; margin: 40px auto 0px;}
+		#sub4 > ul > li {width:300px; height:100%; background-color:#333; float:left; text-align:center; padding:15px 0 0 0px; border:2px solid #fff; font-size:13px;}
+		#sub4 > ul > li:nth-child(3) {background-color:#fff; border:2px solid #000; color:#000;}
+		#sub4 > ul > li > a {color:#fff; text-decoration: none;}
+		
+		#sub4 > #review-tablebox > table th {width:80px; border-bottom:1px solid #eee; color:#333}
+		#sub4 > #review-tablebox > table td:first-of-type {width:770px; border-bottom:1px solid #eee;}
+		#sub4 > #review-tablebox > table td:first-of-type > a {color:#333; text-decoration: none;}
+		#sub4 > #review-tablebox > table td:nth-of-type(2) {width:80px; text-align:center; border-bottom:1px solid #eee;}
+		#sub4 > #review-tablebox > table td:nth-of-type(3) {width:120px; text-align:center; border-bottom:1px solid #eee;}
+		#sub4 > #review-tablebox > table td:last-of-type {width:150px; text-align:center; border-bottom:1px solid #eee;}
+
+		#sub4 > #review-tablebox > button {float:right; margin:10px 0 0 0px; width:70px; height:25px; color:#333; font-size:11px; background-color:#fff; border:1px solid #ddd;}
+		#sub4 > #review-tablebox > button:hover {cursor:pointer;}
+		#sub4 > #review-tablebox > table {display:inline-block; margin:0px auto; line-height:40px; width:1200px; font-size:13px; color:#333;}
+
+		#sub5 {width: 1200px; height: 400px; margin: 0 auto;}
+		#sub5 > ul {width: 1200px; height: 50px; margin: 40px auto 0px;}
+		#sub5 > ul > li {width:300px; height:100%; background-color:#333; float:left; text-align:center; padding:15px 0 0 0px; border:2px solid #fff; font-size:13px;}
+		#sub5 > ul > li:nth-child(4) {background-color:#fff; border:2px solid #000; color:#000;}
+		#sub5 > ul > li > a {color:#fff; text-decoration: none;}
+		
+		#sub5 > #review-tablebox > table th {width:80px; border-bottom:1px solid #eee; color:#333;}
+		#sub5 > #review-tablebox > table td:first-of-type {width:770px; border-bottom:1px solid #eee;}
+		#sub5 > #review-tablebox > table td:first-of-type > a {color:#333; text-decoration: none;}
+		#sub5 > #review-tablebox > table td:nth-of-type(2) {width:80px; text-align:center; border-bottom:1px solid #eee;}
+		#sub5 > #review-tablebox > table td:nth-of-type(3) {width:120px; text-align:center; border-bottom:1px solid #eee;}
+		#sub5 > #review-tablebox > table td:last-of-type {width:150px; text-align:center; border-bottom:1px solid #eee;}
+
+		#sub5 > #review-tablebox > button {float:right; margin:10px 0px; width:70px; height:25px; color:#333; font-size:11px; background-color:#fff; border:1px solid #ddd;}
+		#sub5 > #review-tablebox > button:hover {cursor:pointer;}
+		#sub5 > #review-tablebox > table {display:inline-block; margin:0px auto; line-height:40px; width:1200px; font-size:13px; color:#333;}

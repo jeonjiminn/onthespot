@@ -1,0 +1,97 @@
+﻿@charset "utf-8";
+
+
+/*슬라이더*/
+#slider {width: 1800px; height: 680px; margin: 0 auto; overflow: hidden; position: relative;}
+#slider > .slide1 {width: 7200px; height: 100%;}
+#slider > .slide1 > li {float: left; width: 1800px; height: 100%; overflow: hidden;}
+#slider > .slide1 > li > a > img {width: 100%; height: 100%;}
+
+#slider > #sidebox {width: 1800px; height: 680px; margin: 0 auto; border: 1px solid #333;}
+#slider > #sidebox > span {position: absolute; top: 50%; display: block; font-size: 35px; color: #fff; line-height: 30px; background: rgba(0,0,0,0.6); cursor: pointer; height: 50px; transform: translateY(-50%); }
+#slider > #sidebox > span:hover {background: rgba(255,255,255,0.8); color:#000;}
+#slider > #sidebox > .prev {left:0; border-radius: 0 10px 10px 0px; padding:10px;}
+#slider > #sidebox > .next {right:0; border-radius: 10px 0px 0px 10px; padding:10px;}
+
+
+/*섹션*/
+#magazine {width: 1250px; height: 600px; margin: 0 auto;}
+#magazine > h1 {font-size: 35px; text-transform: uppercase; text-align: left; padding: 100px 0 0 22px;}
+#magazine > #arrow {width: 70px; height: 30px; float: right; margin: -50px 10px 0 0px;}
+
+#magazine > .wrap {width: 280px; height: 400px; display: inline-block; margin: 0 0 0 22px; vertical-align: middle;}
+#magazine > .wrap > h4 > a {text-transform: uppercase; text-align: left; text-decoration: none; color:#000; font-size: 20px; display: block; margin: 10px 0 0 0px;}
+
+#magazine > .wrap > .box1 {display: inline-block; width: 280px; height: 280px; overflow: hidden;}
+#magazine > .wrap > .box1 > a > img {width: 100%; height: 100%; transform:scale(1); transition: all 0.5s ease-in-out;}
+#magazine > .wrap > .box1 > a > img:hover {transform: scale(1.2);}
+
+
+
+#new {width: 1250px; height: 1100px; margin: 0 auto;}
+#new > h1 {font-size: 35px; text-transform: uppercase; text-align: left; padding: 80px 0 0 23px;}
+#new > #arrow2 {width: 70px; height: 30px; float: right; margin: -50px 10px 0 0px;}
+
+#new > .box2 {width: 223px; height: 350px; float: left; box-sizing: border-box; margin:5px 0px 80px 23px;}
+#new > .box2 > a > img {width: 100%; height: 210px;}
+#new > .box2 > a > img:hover {opacity: 0.5;}
+#new > .box2 > h5 > a {font-size: 15px; text-transform: uppercase; text-align: left; text-decoration: none; color: #000;}
+#new > .box2 > h5 > a:before {content: "new arrival"; background-color: yellowgreen; color: #fff; display: block; font-size: 10px; text-align: center; margin: 10px 60px 25px 60px; border-radius: 10px;}
+#new > .box2 > pre-wrap > a {font-size: 14px; text-transform: uppercase; text-decoration: none; color: #666; text-align: left; display: block; margin: 10px 0px; white-space: pre-wrap;}
+#new > .box2 > pre-wrap > a:hover {color: #000;}
+#new > .box2 > p {font-size: 20px; color: darkred; display: block;}
+#new > .box2 > p:after {content: "원"; color: darkred; font-size: 15px;}
+
+
+/*중간배너*/
+#banner {width: 100%; height: 300px;}
+#banner > a > img {width: 100%; height: 100%;}
+
+#promotion {width: 1250px; height: 700px; margin: 0 auto;}
+#promotion > #txt3 {font-size: 35px; text-transform: uppercase; text-align: left; padding: 100px 0 0 22px;}
+#promotion > #arrow {width: 70px; height: 30px; float: right; margin: -50px 10px 0 0px;}
+
+#promotion > .wrap {width: 280px; height: 400px; display: inline-block; margin: 0 0 0 22px; vertical-align: middle;}
+#promotion > .wrap > h4 > a {text-transform: uppercase; text-align: left; text-decoration: none; color:#000; font-size: 15px; display: block; margin: 10px 0 0 0px;}
+#promotion > .wrap > h4 > a:before {content: "promotion"; background-color: yellowgreen; color: #fff; display: block; font-size: 10px; text-align: center; margin: 10px 80px 25px 80px; border-radius: 10px;}
+#promotion > .wrap > pre-wrap > a {font-size: 14px; text-transform: uppercase; text-decoration: none; color: #666; text-align: left; display: block; margin: 10px 0px; white-space: pre-wrap;}
+#promotion > .wrap > pre-wrap > a:hover {color: #000;}
+#promotion > .wrap > p {font-size: 20px; color: darkred; display: block;}
+#promotion > .wrap > p:after {content: "원"; color: darkred; font-size: 15px;}
+
+
+#promotion > .wrap > .box3 {display: inline-block; width: 280px; height: 280px; overflow: hidden;}
+#promotion > .wrap > .box3 > a > img {width: 100%; height: 100%; transform:scale(1); transition: all 0.5s ease-in-out;}
+#promotion > .wrap > .box3 > a > img:hover {transform: scale(1.2);}
+
+
+
+/*하단 슬라이더 섹션*/
+
+body {overflow-x: hidden;}
+#slidebox {width: 1250px; height: 900px; margin: 0 auto; position: relative;}
+
+#slidebox > #txt_wrap {width: 1250px; margin: 0 auto;}
+#slidebox #txt4 {font-size: 35px; text-transform: uppercase; text-align: left; padding: 100px 0 0 22px;}
+#slidebox #arrow {width: 70px; height: 30px; float: right; margin: -50px 10px 0 0px;}
+
+
+#slidebox span {position: absolute; top: 50%; display: block; font-size: 35px; color: #fff; line-height: 30px; background: rgba(0,0,0,0.6); cursor: pointer; height: 50px; transform: translateY(-50%); }
+#slidebox span:hover {background: rgba(255,255,255,0.8); color:#000;}
+#slidebox .prev2 {left:0; border-radius: 50px; padding:10px;}
+#slidebox .next2 {right:0; border-radius: 50px; padding:10px;}
+
+#slidebox #wrap1 {width: 1000px; height: 550px;}
+#slidebox #wrap {width: 3100px; height: 550px; display: flex; margin: 0 auto;}
+
+#slidebox #wrap > #slider > .box4, .box4-1 {width: 480px; height: 550px; display: inline-block; margin: 0 0 0 22px; vertical-align: middle;}
+#slidebox #wrap > #slider > .box4 > a > img {width: 100%; height: 100%;}
+#slidebox #wrap > #slider > .box4 > h1 {font-size: 30px; text-transform: uppercase; text-align: left; padding: 0 10px;}
+#slidebox #wrap > #slider > .box4 > p {font-size: 15px; text-align: left; font-family: sans-serif; padding: 10px;}
+#slidebox #wrap > #slider > .box4 > div {width: 223px; height: 350px; float: left; display: block; margin: 60px 5px 0 10px;}
+#slidebox #wrap > #slider > .box4 > div > a > img {width: 100%; height: 200px;}
+#slidebox #wrap > #slider > .box4 > div > a > img:hover {opacity: 0.5;}
+#slidebox #wrap > #slider > .box4 > div > h5 > a {font-size: 15px; text-transform: uppercase; text-align: left; text-decoration: none; color: #000;}
+#slidebox #wrap > #slider > .box4 > div > pre-wrap > a {font-size: 14px; text-transform: uppercase; text-decoration: none; color: #666; text-align: left; display: block; margin: 15px 0px; white-space: pre-wrap;}
+#slidebox #wrap > #slider > .box4 > div > p {font-size: 20px; color: darkred; display: block; text-decoration: none;}
+#slidebox #wrap > #slider > .box4 > div > p:after {content: "원"; color: darkred; font-size: 15px;}

@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>On the spot</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/sub.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo"><a href="main.html" target="_self"><img src="img/logo.png" alt="로고 이미지"></a></div>
+		<div id="login">
+			<ul>
+				<li><a href="#">login</a></li>
+				<li><a href="#">my page</a></li>
+				<li><a href="#">help</a></li>
+				<li><a href="#">store</a></li>
+			</ul>
+		</div>
+		<div id="icon">
+			<img src="img/search.png" alt="검색" id="search">
+			<img src="img/cart.png" alt="장바구니" name="cart">
+		</div>
+		<div id="navwrap">
+			<nav>
+				<ul id="menu_list">
+					<li><a href="sub.html" target="_self" style="color: darkred;">uncoming</a></li>
+					<li><a href="sub.html" target="_self">new arrivals</a></li>
+					<li><a href="sub.html" target="_self">brand</a>
+						<div class="subwrap">
+							<nav id="sub">
+								<ul>
+									<li style="width:200px; border: 1px solid #333;">TOP BRAND
+										<div id="submenu">
+											<p>nike</p>
+											<p>adidas</p>
+											<p>newbalance</p>
+											<p>vans</p>
+											<p>convarse</p><br>
+											<p style="text-transform: none; font-size: 13px;">view all brand</p>
+										</div>
+									</li>
+									<li style="width:800px;">ISSUE
+										<div id="imgmenu">
+											<img src="img/drop1.jpeg">
+											<img src="img/drop2.jpeg">
+											<img src="img/drop3.jpeg">
+										</div>
+										<p id="count"></p>
+									</li>
+
+								</ul>
+							</nav>
+						</div>
+					</li>
+					<li><a href="sub.html" target="_self">shoes</a>
+						<div class="subwrap">
+							<nav id="sub">
+								<ul>
+									<li style="width:150px; border: 1px solid #333;">SNEAKERS
+										<div class="submenu2">
+											<p>캔버스화</p>
+											<p>슬립온</p>
+											<p>뮬</p>
+										</div>
+									</li>
+									<li style="width:150px; border: 1px solid #333;">CASUAL
+										<div class="submenu2">
+											<p>운동화</p>
+											<p>로퍼</p>
+											<p>레이스업</p>
+											<p>데크슈즈</p>
+											<p>워킹슈즈</p>
+										</div>
+									</li>
+									<li style="width:150px; border: 1px solid #333;">SANDAL
+										<div class="submenu2">
+											<p>슬라이드</p>
+											<p>아쿠아슈즈</p>
+											<p>스포츠샌들</p>
+											<p>코르크샌들</p>
+											<p>플립플랍</p>
+										</div>
+									</li>
+									<li>RESTOCK
+										<div class="imgmenu2">
+											<img src="img/res.jpeg">
+											<img src="img/res2.jpeg">
+											<img src="img/res3.jpeg">
+											<img src="img/res4.jpeg">
+											<p>view more..</p>
+										</div>
+									</li>
+									<li>FEATURED
+										<div class="imgmenu2">
+											<img src="img/fe.jpeg">
+											<img src="img/fe2.jpeg">
+											<img src="img/fe3.jpeg">
+											<img src="img/fe4.jpeg">
+											<p>view more..</p>
+										</div>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</li>
+					<li><a href="sub.html" target="_self">app&acc</a></li>
+					<li id="sale"><a href="sub.html" target="_self">sale</a></li>
+					<li><a href="sub.html" target="_self">editors diary</a></li>
+					<li><a href="sub.html" target="_self">magazin</a></li>
+					<li><a href="sub.html" target="_self">event</a></li>
+					<li><a href="sub.html" target="_self">기획전</a></li>
+				</ul>
+			</nav>
+		</div>			
+	</header>
+
+	<div id="search_box">
+		<div>
+			<input type="search" name="search" placeholder="찾으실 상품을 입력하세요.">
+			<span><img src="img/search.png"></span>
+			<span><img src="img/x.png" id="x"></span>
+		</div>
+	</div>	
+
+	<div id="sub1">
+		<div id="content">
+			<div id="product">
+				<input type="radio" name="운동화" value="측면1" id="측면1" checked>
+				<label for="측면1"><img src="img/뉴발란스 운동화 측면.jpg"></label>
+				<input type="radio" name="운동화" value="측면2" id="측면2">
+				<label for="측면2"><img src="img/뉴발란스 운동화 측면2.jpg"></label>
+				<input type="radio" name="운동화" value="측면3" id="측면3">
+				<label for="측면3"><img src="img/뉴발란스 운동화 측면3.jpg"></label>
+				<input type="radio" name="운동화" value="윗면" id="윗면">
+				<label for="윗면"><img src="img/뉴발란스 운동화 윗면.jpg"></label>
+				<input type="radio" name="운동화" value="밑면" id="밑면">
+				<label for="밑면"><img src="img/뉴발란스 운동화 밑면.jpg"></label>
+				<div id="imgbox">
+					<img src="img/뉴발란스 운동화 측면.jpg" alt="측면1">
+					<img src="img/뉴발란스 운동화 측면2.jpg" alt="측면2">
+					<img src="img/뉴발란스 운동화 측면3.jpg" alt="측면3">
+					<img src="img/뉴발란스 운동화 윗면.jpg" alt="윗면">
+					<img src="img/뉴발란스 운동화 밑면.jpg" alt="밑면">
+				</div>
+			</div>
+			
+			
+			<div id="context">
+				<div id="context1">
+					<span><a href="#">뉴발란스</a></span>
+					<h2>[NEW BALANCE X BROWNYARD] CM996KW2</h2><br>
+					<p>119,000</p><br>
+					
+					<h3>사이즈</h3>
+					<input type="radio" name="size" value="230">
+					<span>230</span>
+					<input type="radio" name="size" value="240">
+					<span>240</span>
+					<input type="radio" name="size" value="250">
+					<span>250</span>
+					<input type="radio" name="size" value="260">
+					<span>260</span>
+					<input type="radio" name="size" value="270">
+					<span>270</span>
+					<input type="radio" name="size" value="280">
+					<span>280</span>
+
+				</div>
+				<div id="context2">
+					<h5>총 결제금액</h5>
+					<h1>0</h1>
+					<input type="submit" name="submit" value="add cart" id="input1">
+					<input type="submit" name="submit" value="buy now" id="input2">
+				</div>
+				<div id="context3">
+					<span>상품정보</span>
+					<input type="checkbox" name="checkbox" value="wide" checked>
+					<div class="view">
+						<br>
+						<ul>
+							<li>스타일코드 : CM996KW2</li>
+							<li>상품코드 : 0090572 COLOR : KW2</li>
+							<li>소재 : 상세페이지 참조</li>
+							<li>색상 : KW2</li>
+							<li>치수 : 상세페이지 참조</li>
+							<li>굽높이 : 상세페이지 참조</li>
+							<li>제조자 : NEW BALANCE</li>
+							<li>제조국 : 상세페이지 참조</li>
+							<li>A/S 책임자와 전화번호 : ONTHESPOT 02-1644-0136 A/S처리 담당자</li>
+							<li>제조년월 : 상품별 입고시기에 따라 상이하여, 배송 받으신 제품의 라벨 참고 바랍니다.</li>
+							<li>품질보증기준 : 관련 법 및 소비자 분쟁 해결 기준에 따름 (품질보증기간 : 구입일로부터 6개월 이내)</li>
+						</ul><br>
+						<ul>
+							<li>취급 시 주의사항</li>
+							<li>·　상품 착용 및 세탁 시에는 제품에 부착된 라벨 및 취급 주의사항을 꼭 먼저 확인해 주시길 바랍니다.</li>
+							<li>·　가벼운 오염물이 묻었을 때에는 부드러운 솔로 털어내주시기 바랍니다. 물에 젖었을 때에는 바람이 잘 통하는 응달에 건조해 주시기 바랍니다.</li><br>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="sub2">
+		<div id="product-detail">
+			<ul>
+				<li>상품상세정보</li>
+				<li><a href="#sub3">배송안내</a></li>
+				<li><a href="#sub4">상품후기</a></li>
+				<li><a href="#sub5">상품문의</a></li> 
+			</ul>
+			<h2>TIME TRAVELER 2 : NEW CHOICE OF CLASSIC, BROWN</h2>
+			<img src="img/뉴발란스 상세1.jpg" alt="상세이미지1" class="imgbox">
+			<p>Brownyard와 Newbalance의 두 번째 마케팅 협업 'Time Traveler 2 ' ML574, CM996을 선보입니다.<br>
+				안정적인 밸런스로 캐쥬얼 무드의 방향성을 보여주는 브라운야드와 클래식 조거의 트렌드를 정립한 글로벌 브랜드 뉴발란스,<br>
+				두 브랜드가 시간여행을 주제로 두 번째 마케팅 협업을 진행했습니다.<br>
+				브라운야드가 디렉팅한 룩북과 영상에서 이번에 새롭게 출시되는 두 브랜드의 이야기를 만나보실 수 있습니다.<br>
+
+				<br>
+				ML574, CM996 클래식 브라운은 그레이쉬 그레이, 베이지 컬러를 베이스로<br>
+				따뜻하면서도 고급스러운 중후한 매력을 더해 완성한 라인업 입니다.<br>
+				<br>
+				브라운야드가 디렉팅한 룩북 및 영상은 3월 22일 화요일 오전 11시에<br>
+				브라운야드(@brownyard_official), 유니버셜리스트(@universallist) 및 뉴발란스 사이트에서
+			확인해보실수 있습니다.</p>
+			<img src="img/뉴발란스 상세2.jpg" alt="상세이미지2" class="imgbox">
+			<img src="img/뉴발란스 상세3.jpg" alt="상세이미지3" class="imgbox">
+		</div>
+	</div>
+
+	<div id="sub3">
+		<ul>
+			<li><a href="#sub2">상품상세정보</a></li>
+			<li>배송안내</li>
+			<li><a href="#sub4">상품후기</a></li>
+			<li><a href="#sub5">상품문의</a></li> 
+		</ul>
+		<h2>배송안내</h2>
+		<div id="shipping-textbox">
+			<ul>
+				<li class="text">배송비</li>
+				<li>　-　2만원 미만 구매 시 2,500원</li>
+				<li>　-　2만원 이상 구매 시 전액무료(제주도 및 기타 도선료 추가지역 포함)</li><br>
+				<li class="text">평균배송일</li>
+				<li>　-　평일 4시 이전 주문 당일 출고됩니다. (온라인 발송에 한함)</li>
+				<li>　-　결제 완료 후 평균 2일 소요됩니다. (주말 및 공휴일 제외)</li>
+				<li>　-　택배사의 사정에 따라 다소 지연될 수 있습니다. <b>(대한통운 1588-1255)</b></li>
+				<li>　-　오프라인 매장 발송은 2~3일 더 소요될 수 있습니다.</li><br>
+				<li class="text">교환/반품/AS</li>
+				<li><b>On the spot은 온라인/오프라인 매장 구분 없이 교환/반품/AS접수가 가능합니다.</b></li><br>
+				<li>　-　교환은 사이즈 교환만 가능합니다.</li>
+				<li>　-　매장에 방문하여 접수하시면 택배비 무료입니다. (단품 기준 10개 미만에 한함)</li>
+				<li>　-　매장에 방문하여 접수하실 경우 구매내역서를 지참하여 주시기 바랍니다.</li>
+				<li>　-　매장에서 반품 접수를 하신 경우 환불은 온라인 담당자 확인 후 처리됩니다. (확인기간 2-3일 소요/결제하신 결제수단으로 환불)</li>
+				<li>　-　매장에 방문하여 반품/교환 접수 시 최대 10개 미만 상품만 접수 가능합니다.</li>
+				<li>　　(대량 반품/교환은 온라인 사이트를 통해서 접수해주시기 바랍니다. 단순 변심일 경우 택배비 고객 부담)</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="sub4">
+		<ul>
+			<li><a href="#sub2">상품상세정보</a></li>
+			<li><a href="#sub3">배송안내</a></li>
+			<li>상품후기</li>
+			<li><a href="#sub5">상품문의</a></li> 
+		</ul>
+
+		<div id="review-tablebox">
+			<button>전체보기</button>
+			<button>글쓰기</button>
+			<table>                            
+				<tr>
+					<th>5</th>
+					<td><a href="#">사계절 내내 신기 좋아요</a></td>
+					<td>민경윤</td>
+					<td>2022.04.19</td>
+					<td>☆★★★★</td>
+				</tr>
+
+				<tr>
+					<th>4</th>
+					<td><a href="#">무난함</a></td>
+					<td>최윤정</td>
+					<td>2022.04.19</td>
+					<td>☆☆★★★</td>
+				</tr>
+
+				<tr>
+					<th>3</th>
+					<td><a href="#">착용감이 좋습니다!!</a></td>
+					<td>유선민</td>
+					<td>2022.04.19</td>
+					<td>☆★★★★</td>
+				</tr>
+
+				<tr>
+					<th>2</th>
+					<td><a href="#">사이즈 잘 맞아요</a></td>
+					<td>송채원</td>
+					<td>2022.04.19</td>
+					<td>★★★★★</td>
+				</tr>
+
+				<tr>
+					<th>1</th>
+					<td><a href="#">색상이 예뻐요</a></td>
+					<td>심다혜</td>
+					<td>2022.04.19</td>
+					<td>★★★★★</td>
+				</tr>
+			</table> 
+		</div>
+	</div>
+
+	<div id="sub5">
+		<ul>
+			<li><a href="#sub2">상품상세정보</a></li>
+			<li><a href="#sub3">배송안내</a></li>
+			<li><a href="#sub4">상품후기</a></li>
+			<li>상품문의</li> 
+		</ul>
+
+		<div id="review-tablebox">
+			<button>글쓰기</button>
+			<table>                            
+				<tr>
+					<th>5</th>
+					<td><a href="#">-상품문의-</a></td>
+					<td>민경윤</td>
+					<td>2022.04.13</td>
+					<td>답변완료</td>
+				</tr>
+
+				<tr>
+					<th>4</th>
+					<td><a href="#">-상품문의-</a></td>
+					<td>최윤정</td>
+					<td>2022.04.13</td>
+					<td>답변완료</td>
+				</tr>
+
+				<tr>
+					<th>3</th>
+					<td><a href="#">-배송문의-</a></td>
+					<td>유선민</td>
+					<td>2022.04.13</td>
+					<td>답변완료</td>
+				</tr>
+
+				<tr>
+					<th>2</th>
+					<td><a href="#">-교환문의-</a></td>
+					<td>송채원</td>
+					<td>2022.04.13</td>
+					<td>답변완료</td>
+				</tr>
+
+				<tr>
+					<th>1</th>
+					<td><a href="#">-배송문의-</a></td>
+					<td>심다혜</td>
+					<td>2022.04.13</td>
+					<td>답변완료</td>
+				</tr>
+			</table> 
+		</div>
+	</div>
+
+
+
+
+	<footer>
+		<div id="footerbox">
+			<div id="footerbox2">
+				<div id="footerlogo"><img src="https://www.onthespot.co.kr/static/images/common/comm_footer_ci_ots.png" alt="하단 로고"></div>
+				<p>(주)에이비씨마트 코리아 대표이사 : 이기호 주소 : 서울특별시 중구 을지로 100, B동 21층 (을지로 2가, 파인에비뉴)<br>
+
+					사업자등록번호 : 201-81-76174 통신판매업신고 : 제 2015-서울중구-1036호<br> 개인정보보호책임자 : 박영수 <a href="#">이메일 : onthespot@abcmartkorea.com</a> </p>
+					<ul>
+						<li><a href="#">사업자정보확인</a></li>
+						<li>|</li>
+						<b><li><a href="#">개인정보처리방침</a></li></b>
+						<li>|</li>
+						<li><a href="#">이용약관</a></li>
+						<li>|</li>
+						<li><a href="#">멤버쉽 이용약관</a></li>
+						<li>|</li>
+						<li><a href="#">위치 정보 서비스 이용약관</a></li>
+						<li>|</li>
+						<li><a href="#">구매안전서비스 가입사실확인</a></li>
+					</ul>
+				</div>
+				<div id="footerbox3">
+					<div class="box">
+						<h4>information</h4>
+						<ul>
+							<li><a href="#">faq</a></li>
+							<li></li>
+							<li><a href="#">입점/제휴문의</a></li>
+							<li></li>
+							<li><a href="#">기프트카드안내</a></li>
+						</ul>
+					</div>
+					<div class="box">
+						<h4>social</h4>
+						<a href="#"><img src="https://cdn3.iconfinder.com/data/icons/ink-social-media/35/instagram-256.png" alt="인스타 아이콘"></a>
+						<a href="#"><img src="https://cdn3.iconfinder.com/data/icons/ink-social-media/35/youtube-256.png" alt="유튜브 아이콘"></a>
+					</div>
+				</div>
+				<div id="footerbox4">
+					<p>본 상품의 상품 이미지 저작권은 ㈜에이비씨마트코리아에 있으며 내용의 무단복제를 금합니다.<br>
+					COPYRIGHT ⓒ ABC-MART KOREA CO,LTD. ALL RIGHTS RESERVED.</p>
+				</div>	
+			</div>
+		</div>	
+	</footer>
+	<script>
+		
+		/*네비게이션*/
+
+		$("#search_box").css("display", "none");
+		$("#search").click(function(){
+			$("#search_box").slideToggle();
+			$("#x").click(function(){
+				$("#search_box").slideUp();
+			});
+		});
+
+		$("#brand #sub").css("display", "none");
+		$("#brand").click(function(){
+			$(this).children("div").stop().slideToggle();
+		});
+
+		/*상단 슬라이더*/
+
+		function prev(){			
+			$(".slide1 li:last").prependTo(".slide1");
+			$(".slide1").css({marginLeft:-1920});
+			$(".slide1").stop().animate({marginLeft:0},800);
+		}
+
+		function next(){
+			$(".slide1").stop().animate({marginLeft:-1920},800,function(){
+				$(".slide1 li:first").appendTo(".slide1");
+				$(".slide1").css({marginLeft:0});
+			});
+		}
+
+		function slide(){
+			$(".slide1").stop().animate({marginLeft:-1920},800,function(){
+				$(".slide1 li:first").appendTo(".slide1");
+				$(".slide1").css({marginLeft:0});
+			});
+		}
+
+		setInterval(slide,4000);
+
+		$(".prev").click(function(){
+			prev();
+		});
+
+		$(".next").click(function(){
+			next();
+		});
+
+		window.onload=function(){
+
+			var title=document.getElementById("txt")
+			title.innerHTML = "new arrival";
+
+		}
+	</script>
+</body>
+</html>
